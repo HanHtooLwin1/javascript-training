@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverted Full Pyramid</title>
+</head>
+<body>
+    <script>
+        function printInverted_Full_Pyramid(count){
+            let starPattern = "";
+            for(let i = 0; i < count; i++){
+                for(let m = count; m > i; m--){
+                    starPattern += "*" + "";
+                }
+                starPattern += "<br>";
+                for(let n = -1; n < i; n++){
+                    starPattern += "&nbsp";
+                }
+            }
+            document.write(starPattern);
+        }
+        printInverted_Full_Pyramid(8);
+    </script>
+</body>
+</html>

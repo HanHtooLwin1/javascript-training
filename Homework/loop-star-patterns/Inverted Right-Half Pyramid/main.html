@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverted Right-Half Pyramid</title>
+</head>
+<body>
+    <script>
+        function printInverted_Right_Half_Pyramid(count){
+            let star = "";
+            for(let i = 0; i < count; i++){
+                for(let m = count; m > i; m--){
+                    star += "*";
+                }
+                star += "<br>";
+            }
+            document.write(star);
+        }
+        printInverted_Right_Half_Pyramid(5);
+    </script>
+</body>
+</html>

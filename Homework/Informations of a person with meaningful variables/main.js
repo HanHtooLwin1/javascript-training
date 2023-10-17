@@ -1,0 +1,14 @@
+let name = "Jimmy";
+let birthday = "12.6.1999";
+let dad_Name = "Austin";
+let mom_Name = "Mary";
+let height = "150cm";
+let weight = "137lb";
+let currentAge = 24;
+let occupation = "student";
+let dad_Occupation = "teacher";
+let mom_O                                                                                                                                                     ccupation = "lawyer";
+let hobby = "swimming";
+let current_skills = "coding, drawing, content writing";
+let current_amount_of_money$ = "0$";
+let phone_Num = "1223456";

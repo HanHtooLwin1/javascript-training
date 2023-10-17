@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Status</title>
+</head>
+<body>
+    <script>
+        let runningCarCount = +prompt('Enter running car amount!', '');
+        let stoppingCarCount = +prompt('Enter stopping car amount!', '');
+
+        let trafficStatus = (runningCarCount, stoppingCarCount) => {
+            if (runningCarCount > stoppingCarCount){
+                alert("Traffic is best!");
+            } else if(runningCarCount == 0 && stoppingCarCount == 0){
+                alert("Traffic is clear!");
+            } else if(runningCarCount == stoppingCarCount){
+                alert("Traffic is good!");
+            } else if(runningCarCount < stoppingCarCount){
+                alert("Traffic is bad!");
+            }
+        }
+
+        trafficStatus(runningCarCount,stoppingCarCount);
+    </script>
+</body>
+</html>

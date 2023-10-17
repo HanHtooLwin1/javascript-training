@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/008cb3d261.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-4 m-auto bg-calculator">
+            <div class="row lh-1 mt-1">
+                <div class="col-1 more-btn mx-1">
+                    <button  class="btn py-0 px-0">
+                        <i class="fa-solid fa-bars fa-sm" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+                <div class="col-2" style="padding: 6px 0px 0px 0px">
+                    <p class="text-white my-0"> Standard </p>
+                </div>
+            </div>
+
+            <div>
+                <p class="processStyle d-flex mb-0 mx-1 justify-content-end" id="processBoard"></p>
+            </div>
+
+            <div>
+                <p class="text-white d-flex h1 justify-content-end" id="displayNumber">0</p>
+            </div>
+
+            <div class="row ">
+                <div class="col-2 px-1 mb-1 text-center">
+                    <button class="memory-btn text-white"> MC </button>
+                </div>
+                <div class="col-2 px-1 mb-1 text-center">
+                    <button class="memory-btn text-white"> MR </button>
+                </div>
+                <div class="col-2 px-1 mb-1 text-center">
+                    <button class="memory-btn text-white"> M+ </button>
+                </div>
+                <div class="col-2 px-1 mb-1 text-center">
+                    <button class="memory-btn text-white"> M- </button>
+                </div>
+                <div class="col-2 px-1 mb-1 text-center">
+                    <button class="memory-btn text-white"> MS </button>
+                </div>
+                <div class="col-2 px-1 mb-1 text-center">
+                    <button class="memory-btn text-white">
+                        M
+                        <i class="fa-solid fa-angle-down fa-xs" style="color: #ffffff;"></i> 
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 p-0 size-calculator d-flex float-left">
+                    <div class="btn-size margin-left p-0">
+                        <button class="button1 text-white"> % </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button1 text-white"> CE </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button1 text-white" onclick="calculator.clearNumber()"> C </button>
+                    </div>
+                    <div class="btn-size margin-right p-0">
+                        <button class="button1 text-white">
+                            <i class="fa-solid fa-delete-left fa-xs" style="color: #ffffff;"></i>      
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 p-0 size-calculator d-flex float-left">
+                    <div class="btn-size margin-left p-0">
+                        <button class="button1 btn-secondary text-white"> 1/x </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button1 btn-secondary text-white"> x^2 </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button1 btn-secondary text-white"> √x </button>
+                    </div>
+                    <div class="btn-size margin-right p-0">
+                        <button class="button1 btn-secondary text-white"> ÷ </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 p-0 size-calculator d-flex float-left">
+                    <div class="btn-size margin-left p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(7)"> 7 </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(8)"> 8 </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(9)"> 9 </button>
+                    </div>
+                    <div class="btn-size margin-right p-0">
+                        <button class="button1 btn-secondary text-white"> × </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 p-0 size-calculator d-flex float-left">
+                    <div class="btn-size margin-left p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(4)"> 4 </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(5)"> 5 </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(6)"> 6 </button>
+                    </div>
+                    <div class="btn-size margin-right p-0">
+                        <button class="button1 btn-secondary text-white"> - </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 p-0 size-calculator d-flex float-left">
+                    <div class="btn-size margin-left p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(1)"> 1 </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(2)"> 2 </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(3)"> 3 </button>
+                    </div>
+                    <div class="btn-size margin-right p-0">
+                        <button class="button1 btn-secondary text-white" onclick="calculator.addNumbers('+')"> + </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-1">
+                <div class="col-12 p-0 size-calculator d-flex float-left">
+                    <div class="btn-size margin-left p-0">
+                        <button class="button2 btn-secondary text-white"> +/- </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button2 btn-secondary text-white" onclick="calculator.inputNumber(0)"> 0 </button>
+                    </div>
+                    <div class="btn-size p-0">
+                        <button class="button2 btn-secondary text-white"> . </button>
+                    </div>
+                    <div class="btn-size margin-right p-0">
+                        <button class="button1 btn-secondary text-white" onclick="calculator.answer('=')"> = </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const calculator = {
+            value: "",
+            result: 0,
+            process: "",
+            x: "",
+            y: "",
+            z: "",
+            num1: "",
+            num2: "",
+            a: "",
+
+            inputNumber: function(value) {
+                let displayNumber = document.getElementById("displayNumber").innerHTML;
+
+                if(displayNumber == 0){
+                    document.getElementById("displayNumber").innerHTML = value;
+                } else if((this.z == 10)){
+                    document.getElementById("displayNumber").innerHTML = value;
+                    document.getElementById("processBoard").innerHTML = "";
+                    this.z = 5;
+                } else if(this.x == 10) {
+                    document.getElementById("displayNumber").innerHTML = value;
+                    this.x = "";
+                } else if(displayNumber != 0) {
+                    document.getElementById("displayNumber").innerHTML += value;
+                } 
+                this.y = 1;
+            },
+
+            addNumbers: function(operator) {
+                let secondNumber = +document.getElementById("displayNumber").innerHTML;
+                if(this.y == 1) {
+                    this.result = secondNumber + +(this.result);
+                    this.y = "";
+                }
+                document.getElementById("processBoard").innerHTML = this.result + " " + operator;
+                document.getElementById("displayNumber").innerHTML = this.result;
+                this.num1 = this.result;
+                this.x = 10;
+            },
+
+            clearNumber: function() {
+                document.getElementById("displayNumber").innerHTML = 0;
+                document.getElementById("processBoard").innerHTML = "";
+                this.result = 0;
+                this.num1 = "";
+                this.num2 = "";
+                this.z = "";
+                this.x = "";
+                this.y = "";
+            },
+
+            answer: function(operator) {
+                this.process = document.getElementById("displayNumber").innerHTML;
+                this.num1 = this.process;
+                
+                if(this.z == 5) {
+                    document.getElementById("processBoard").innerHTML = this.num1 + " + " + this.num2 + " " + operator;
+                    document.getElementById("displayNumber").innerHTML = +(this.num1) + +(this.num2);
+                    this.z = 10;
+                }
+                else if(this.z != 10) {
+                    document.getElementById("processBoard").innerHTML += " " + this.process + " " + operator;
+                    document.getElementById("displayNumber").innerHTML = +(this.result) + +(this.process);
+                    this.z = 10;
+                    this.num2 = this.process;
+                } else if(this.process != 0){
+                    this.num1 = document.getElementById("displayNumber").innerHTML;
+                    document.getElementById("processBoard").innerHTML = this.num1 + " + " + this.num2 + " " + operator;
+                    document.getElementById("displayNumber").innerHTML = +(this.num1) + +(this.num2);
+                    this.a = +(this.num1) + +(this.num2);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left-Half Pyramid</title>
+</head>
+<body>
+    <script>
+        function printLeft_Half_Pyramid(count){
+            let starPattern = "";
+            for(let i = 0; i < count; i++){
+                for(let space = count-1; space > i; space--){
+                    starPattern += "&nbsp&nbsp";
+                }
+                for(let star = -1; star < i; star++){
+                    starPattern += "*";
+                }
+                starPattern += "<br>";
+            }
+            document.write(starPattern);
+        }
+        printLeft_Half_Pyramid(9);
+    </script>
+</body>
+</html>

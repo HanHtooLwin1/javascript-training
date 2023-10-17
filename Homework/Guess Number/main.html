@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Even or Odd</title>
+</head>
+<body>
+    <script>
+        let guessAnswer = prompt("Guess 'even' or 'odd'", "");
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+        if((guessAnswer == "even" && randomNumber % 2 == 0) || (guessAnswer == "odd" && randomNumber % 2 != 0)) {
+            alert("You're right! It is " + randomNumber + ".");
+        } else {
+            alert("You're wrong! The answer is " + randomNumber + ".");
+        }
+    </script>
+</body>
+</html>

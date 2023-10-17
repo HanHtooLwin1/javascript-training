@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Pattern</title>
+</head>
+<body>
+    <script>
+        function printDiamondPattern(width){
+            let starPattern = "";
+            for(let i = 0; i < width; i++){
+                for(let m = width-1; m > i; m--){
+                    starPattern += "&nbsp";
+                }
+
+                for(let star = -1; star < i; star++){
+                    starPattern += "*";
+                }
+                starPattern += "<br>";
+            }
+
+            for(let i = 1; i < width; i++){
+                for(let n = 1; n <= i; n++){
+                    starPattern += "&nbsp";
+                }
+                for(let m = width-1; m >= i; m--){
+                    starPattern += "*";
+                }
+                starPattern += "<br>";
+            }
+            document.write(starPattern);
+        }        
+        printDiamondPattern(7);
+    </script>
+</body>
+</html>

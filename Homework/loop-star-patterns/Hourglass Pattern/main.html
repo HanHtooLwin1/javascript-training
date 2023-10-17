@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourglass Pattern</title>
+</head>
+<body>
+    <script>
+        function printHourglass(width) {
+            let starPattern = "";
+            for(let i = 0; i < width; i++){
+                for(let space = 0; space < i; space++){
+                    starPattern += "&nbsp";
+                }
+
+                for(let star = width; star > i; star--){
+                    starPattern += "*";
+                }
+                starPattern += "<br>";
+            }
+
+            for(let i = 1; i < width; i++){
+                for(let space = width-1; space > i; space--){
+                    starPattern += "&nbsp";
+                }
+
+                for(let star = -1; star < i; star++){
+                    starPattern += "*";
+                }
+                starPattern += "&nbsp";
+            }
+            document.write(starPattern);
+            }
+            printHourglass(4);
+    </script>
+</body>
+</html>

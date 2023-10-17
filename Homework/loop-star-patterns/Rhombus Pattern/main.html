@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhombus Pattern</title>
+</head>
+<body>
+    <script>
+        function printRhombusPattern(width,height){
+            let starPattern = "";
+            for(let i = 0; i < height; i++){
+                for(let m = 0; m < width; m++){
+                    starPattern += "*" + "&nbsp";
+                }
+                starPattern += "<br>";
+                for(let n = -1; n < i; n++){
+                    starPattern += "&nbsp";
+                }
+            }
+            document.write(starPattern);
+        }
+        printRhombusPattern(4,6);
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Addition--> 
+    <input type="text" id="number1" />
+    <label> + </label>
+    <input type="text" id="number2" />
+    <button onclick="sum()"> = </button>
+    <input type="text" id="result1" />
+    <br/>
+    <br/>
+
+    <!--Subtraction-->
+    <input type="text" id="number01" />
+    <label> - </label>
+    <input type="text" id="number02" />
+    <button onclick="sub()"> = </button>
+    <input type="text" id="result2" />
+    <br/>
+    <br/>
+
+    <!--Multiplying-->
+    <input type="text" id="number001">
+    <label> * </label>
+    <input type="text" id="number002">
+    <button onclick="multiply()"> = </button>
+    <input type="text" id="result3">
+    <br/>
+    <br/>
+
+    <!--Division-->
+    <input type="text" id="number0001">
+    <label> / </label>
+    <input type="text" id="number0002">
+    <button onclick="division()"> = </button>
+    <input type="text" id="result4">
+    <br/>
+    <br/>
+
+    <script>
+        function sum() {
+            let num1 = +document.getElementById("number1").value;
+            let num2 = +document.getElementById("number2").value;
+            document.getElementById("result1").value = num1 + num2;
+        }
+
+        function sub() {
+            let num1 = +document.getElementById("number01").value;
+            let num2 = +document.getElementById("number02").value;
+            document.getElementById("result2").value = num1 - num2;
+        }
+
+        function multiply() {
+            let num1 = +document.getElementById("number001").value;
+            let num2 = +document.getElementById("number002").value;
+            document.getElementById("result3").value = num1 * num2;
+        }
+
+        function division() {
+            let num1 = +document.getElementById("number0001").value;
+            let num2 = +document.getElementById("number0002").value;
+            document.getElementById("result4").value = num1 / num2;
+        }
+    </script>
+</body>
+</html>

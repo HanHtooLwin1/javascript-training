@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>I am hungry</h2>
+    <br/>
+    <b>Comments</b>
+    <hr/>
+    <div id="commentBox"></div>
+    <hr/>
+    <textarea id="commentTxt"></textarea>
+    <button onclick="submit()"> Submit </button>
+
+    <script>
+        function submit() {
+            let comment = document.getElementById("commentTxt").value;
+            document.getElementById("commentTxt").value = ""; // Clear or refresh the comment box
+            let commentBox = document.getElementById("commentBox");
+
+            commentBox.innerHTML += "<p>" + comment + "</p>";
+        }
+    </script>
+</body>
+</html>
